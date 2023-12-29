@@ -20,3 +20,50 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+// ul,
+// li {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+
+h1 {
+  margin-left: 125px;
+}
+
+ul {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 500px;
+  width: 500px;
+  list-style: none;
+}
+
+li {
+  border: thin solid black;
+}
+ul li.taken {
+  cursor: not-allowed;
+}
+ul li.empty {
+  background-color: gray;
+  cursor: not-allowed;
+}
+ul li {
+  /* Use a monospace font */
+  font-family: monospace;
+  font-size: var(--square-font-size);
+
+  /* Style the background color of the item */
+  background-color: var(--square-background-color);
+
+  /* Make the cursor a pointer by default */
+  cursor: pointer;
+
+  /* Center the text in the LI */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s font-size ease-in-out;
+}
